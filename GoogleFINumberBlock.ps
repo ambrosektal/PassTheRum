@@ -1,0 +1,31 @@
+$first="262"
+
+1..9999999 |% {$phoneNumber = $_.ToString('0000000'); 
+Invoke-WebRequest -Uri "https://fi.google.com/xhr/?????" -Method "POST" -Headers @{"origin"="https://fi.google.com"; 
+"accept-encoding"="gzip, deflate, br"; 
+"accept-language"="en-US,en;q=0.9"; 
+"x-fi-pagetoken"="?????"; 
+"cookie"="CONSENT=YES+US.en+; 
+SID=?????; 
+HSID=?????; 
+SSID=????; 
+APISID=????; 
+SAPISID=???; 
+OGP=???:; 
+OGPC=???:; 
+S=maestro=???:billing-ui-v3=???:billing-ui-v3-efe=???; 
+NID=185=??????????; 
+1P_JAR=2019-6-10-16; 
+SIDCC=????; 
+"x-client-data"=????; 
+"path"=?????; 
+"user-agent"="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"; 
+"accept"="*/*"; 
+"referer"="https://fi.google.com/account"; 
+"authority"="fi.google.com"; 
+"scheme"="https"; 
+"dnt"="1"; 
+"method"="POST"
+} 
+-ContentType "application/json" -Body "[null,1,[`"$first$phoneNumber`",`"`"]]" ;
+start-sleep 1  };
